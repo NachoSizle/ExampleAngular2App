@@ -1,31 +1,100 @@
+body {
+  background-color: #2d90b5 !important;
+}
+
+.navbar {
+  background-color: #21519e !important;
+  border-color: transparent !important;
+}
+
+.navbar-brand {
+  color: #fff !important;
+}
+
+.changeColor {
+  color: #dedfe0 !important;
+}
+
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
+  float: right;
 }
+
 @media screen and (min-width: 767px) {
-  .iframeMaps{
+  .iframeMaps {
     height: 250px !important;
   }
-
-  #inputSearchCity{
-    padding-left: 45px !important;
+  #inputSearchCity {
+    padding-left: 30px !important;
+  }
+  .progress {
+    height: 50px !important;
+    position: relative;
+    right: 45px;
+    top: 125px;
+  }
+  .vertical {
+    display: inline-block;
+    width: 250% !important;
+    -webkit-transform: rotate(-90deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    box-shadow: inset 0px 4px 6px #ccc;
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px){
-  #inputSearchCity{
+@media screen and (min-width: 413px) and (max-width: 767px) {
+  #inputSearchCity {
     padding-right: 30px !important;
   }
+  .containerTemperature {
+    padding-right: 0px !important;
+  }
+  .citySelectedContainer {
+    padding-left: 0px !important;
+  }
+  .progress {
+    height: 35px !important;
+    position: relative;
+    right: 45px;
+    top: 80px;
+  }
+  .vertical {
+    width: 300% !important;
+  }
 }
 
+@media screen and (min-width: 413px) and (max-width: 767px) and (orientation: landscape) {
+  h1 {
+    margin-right: 85px !important;
+  }
+  .vertical {
+    width: 100% !important;
+  }
+}
 
+@media screen and (max-width: 413px) {
+  #inputSearchCity {
+    width: 90% !important;
+  }
+  .progress {
+    height: 35px !important;
+    position: relative;
+    right: 60px;
+    top: 80px;
+  }
+  .vertical {
+    width: 440% !important;
+  }
+}
 
-.padR5{
+.padR5 {
   padding-right: 5px !important;
 }
 
-.padL5{
+.padL5 {
   padding-left: 5px !important;
 }
 
@@ -35,4 +104,33 @@ h1 {
 
 .noPadL {
   padding-left: 0px !important;
+}
+
+.width80 {
+  width: 80% !important;
+}
+
+.width60 {
+  width: 60% !important;
+}
+
+.width40 {
+  width: 40% !important;
+}
+
+.width20 {
+  width: 20% !important;
+}
+
+.vertical {
+  display: inline-block;
+  width: 200%;
+  -webkit-transform: rotate(-90deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-90deg);
+  box-shadow: inset 0px 4px 6px #ccc;
+}
+
+.progress-bar {
+  box-shadow: inset 0px 4px 6px rgba(100, 100, 100, 0.6);
 }

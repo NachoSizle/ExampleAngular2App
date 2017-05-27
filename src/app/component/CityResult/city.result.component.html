@@ -1,18 +1,23 @@
-<div *ngIf="citySelected" class="col-xs-12 col-sm-12 col-md-10">
-  <div *ngIf="stationFounded" class="col-xs-8 col-sm-10 col-md-10">
+<div *ngIf="citySelected" class="col-xs-12 col-sm-12 col-md-10 citySelectedContainer">
+  <div *ngIf="stationFounded" class="col-xs-10 col-sm-10 col-md-10">
     <h2>{{citySelected}}</h2>
-    <h4>{{stationFounded.name}}</h4>
-    <iframe #iframeMapsContainer class="iframeMaps" width="100%" height="100%" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/" allowfullscreen></iframe>
+    <h4 class="changeColor">{{stationFounded.name}}</h4>
+    <iframe [src]="printGoogleMap()" iframeMapsContainer class='iframeMaps' width='100%' height='100%' frameborder='0' style='border:0' allowfullscreen></iframe>
   </div>
-  <div *ngIf="stationFounded" class="col-xs-4 col-sm-2 col-md-2">
-    <h1>{{stationFounded.temperature}}</h1>
+  <div *ngIf="stationFounded" class="col-xs-2 col-sm-2 col-md-2 containerTemperature">
+    <h1>{{stationFounded.temperature}}º</h1>
+
+    <div class="progress vertical">
+      <div [class]="getClassProgressBar(stationFounded.temperature)" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+      </div>
+    </div>
   </div>
 </div>
 
 <div *ngIf="stationFounded" class="col-xs-12 col-sm-12 col-md-10">
-  <div *ngIf="stationFounded" class="col-xs-8 col-sm-10 col-md-10">
+  <div *ngIf="stationFounded" class="col-xs-12 col-sm-10 col-md-10">
     <h2>More info:</h2>
-    <h4>Clouds: {{stationFounded.clouds}}</h4>
-    <h4>WindSpeed: {{stationFounded.windSpeed}}</h4>
+    <h4 class="changeColor"><i class="material-icons">cloud</i> {{stationFounded.clouds}}</h4>
+    <h4 class="changeColor"><i class="material-icons">near_me</i> {{stationFounded.windSpeed}} km/h</h4>
+  </div>
 </div>

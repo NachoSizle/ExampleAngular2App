@@ -15,17 +15,21 @@ var CityServices = (function () {
     function CityServices(_http) {
         this._http = _http;
     }
-    CityServices.prototype.getCity = function (thisCity) {
-        return this._http.get("http://api.geonames.org/searchJSON?q=" + thisCity
-            + "&maxRows=20&startRow=0&lang=es&isNameRequired=true&style=FULL&username=ilgeonamessample")
+    CityServices.prototype.getCity = function (thisCity, user) {
+        var response;
+        response = this._http.get("http://api.geonames.org/searchJSON?q=" + thisCity
+            + "&maxRows=20&startRow=0&lang=es&isNameRequired=true&style=FULL&username=" + user)
             .map(function (res) { return res.json(); });
+        return response;
     };
-    CityServices.prototype.getTemperature = function (thatPtos) {
-        return this._http.get("http://api.geonames.org/weatherJSON?north=" + thatPtos.north
+    CityServices.prototype.getTemperature = function (thatPtos, user) {
+        var response;
+        response = this._http.get("http://api.geonames.org/weatherJSON?north=" + thatPtos.north
             + "&south=" + thatPtos.south
             + "&east=" + thatPtos.east
             + "&west=" + thatPtos.west
-            + "&username=ilgeonamessample").map(function (res) { return res.json(); });
+            + "&username=" + user).map(function (res) { return res.json(); });
+        return response;
     };
     return CityServices;
 }());

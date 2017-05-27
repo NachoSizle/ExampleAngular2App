@@ -1,4 +1,4 @@
-<div id="inputSearchCity" class="col-xs-12 col-sm-8 col-md-10">
+<div id="inputSearchCity" class="col-xs-12 col-sm-10 col-md-10">
   <div class="col-xs-10 col-sm-10 noPadL padR5">
     <input #cityToSearchInput type="text" class="form-control" placeholder="Search">
   </div>
@@ -7,6 +7,6 @@
   </div>
 </div>
 
-<div class="col-xs-12 col-sm-10 col-md-10" *ngIf="isCityFounded">
+<div class="col-xs-12 col-sm-12 col-md-10 noPadL noPadR" *ngIf="isCityFounded">
   <city-result [citySelected]="cityToSearch"></city-result>
 </div>
