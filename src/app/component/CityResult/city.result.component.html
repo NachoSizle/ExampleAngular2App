@@ -1,0 +1,18 @@
+<div *ngIf="citySelected" class="col-xs-12 col-sm-12 col-md-10">
+  <div *ngIf="stationFounded" class="col-xs-8 col-sm-10 col-md-10">
+    <h2>{{citySelected}}</h2>
+    <h4>{{stationFounded.name}}</h4>
+    <iframe #iframeMapsContainer class="iframeMaps" width="100%" height="100%" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/" allowfullscreen></iframe>
+  </div>
+  <div *ngIf="stationFounded" class="col-xs-4 col-sm-2 col-md-2">
+    <h1>{{stationFounded.temperature}}</h1>
+  </div>
+</div>
+
+<div *ngIf="stationFounded" class="col-xs-12 col-sm-12 col-md-10">
+  <div *ngIf="stationFounded" class="col-xs-8 col-sm-10 col-md-10">
+    <h2>More info:</h2>
+    <h4>Clouds: {{stationFounded.clouds}}</h4>
+    <h4>WindSpeed: {{stationFounded.windSpeed}}</h4>
+</div>

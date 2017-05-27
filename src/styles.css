@@ -1,0 +1,38 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+@media screen and (min-width: 767px) {
+  .iframeMaps{
+    height: 250px !important;
+  }
+
+  #inputSearchCity{
+    padding-left: 45px !important;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px){
+  #inputSearchCity{
+    padding-right: 30px !important;
+  }
+}
+
+
+
+.padR5{
+  padding-right: 5px !important;
+}
+
+.padL5{
+  padding-left: 5px !important;
+}
+
+.noPadR {
+  padding-right: 0px !important;
+}
+
+.noPadL {
+  padding-left: 0px !important;
+}

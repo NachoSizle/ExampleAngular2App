@@ -1,0 +1,12 @@
+<div id="inputSearchCity" class="col-xs-12 col-sm-8 col-md-10">
+  <div class="col-xs-10 col-sm-10 noPadL padR5">
+    <input #cityToSearchInput type="text" class="form-control" placeholder="Search">
+  </div>
+  <div class="col-xs-2 col-sm-2 padL5">
+    <button #btnSearchCity (click)="searchThisCity(cityToSearchInput.value)" class="btn btn-default">Search</button>
+  </div>
+</div>
+
+<div class="col-xs-12 col-sm-10 col-md-10" *ngIf="isCityFounded">
+  <city-result [citySelected]="cityToSearch"></city-result>
+</div>
