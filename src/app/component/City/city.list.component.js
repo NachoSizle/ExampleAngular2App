@@ -12,11 +12,25 @@ var core_1 = require("@angular/core");
 var CityListAppComponent = (function () {
     function CityListAppComponent() {
         this.isCityFounded = false;
+        this.showHistoric = false;
+        this.showSearchCity = true;
+        this.nameApp = "Weather";
     }
     CityListAppComponent.prototype.searchThisCity = function (value) {
         this.isCityFounded = true;
         this.cityToSearch = value;
         console.log("Se va a buscar: " + this.cityToSearch);
+        var allCities = JSON.parse(localStorage.getItem('cities'));
+        if (allCities === null) {
+            allCities = [];
+        }
+        allCities.push(value);
+        localStorage.setItem("cities", JSON.stringify(allCities));
+    };
+    CityListAppComponent.prototype.changeViewHistoric = function (show) {
+        this.showHistoric = !show;
+        this.showSearchCity = show;
+        this.isCityFounded = false;
     };
     return CityListAppComponent;
 }());

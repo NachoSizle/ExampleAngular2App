@@ -9,7 +9,7 @@ var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
-var navbar_component_1 = require("./component/Navbar/navbar.component");
+var city_historic_1 = require("./component/CityHistorics/city.historic");
 var city_list_component_1 = require("./component/City/city.list.component");
 var city_result_component_1 = require("./component/CityResult/city.result.component");
 var AppModule = (function () {
@@ -20,8 +20,8 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
-        declarations: [city_list_component_1.CityListAppComponent, navbar_component_1.NavBarComponent, city_result_component_1.CityResultComponent],
-        bootstrap: [city_list_component_1.CityListAppComponent, navbar_component_1.NavBarComponent]
+        declarations: [city_list_component_1.CityListAppComponent, city_result_component_1.CityResultComponent, city_historic_1.CityHistoricAppComponent],
+        bootstrap: [city_list_component_1.CityListAppComponent]
     })
 ], AppModule);
 exports.AppModule = AppModule;

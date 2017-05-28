@@ -91,6 +91,7 @@ export class CityResultComponent {
 
     this.getTemperatureForThisCity();
     this.printGoogleMap();
+    this.citySelected = this.dataFound.name;
   }
 
   printGoogleMap(){

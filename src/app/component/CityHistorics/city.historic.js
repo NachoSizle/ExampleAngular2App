@@ -9,18 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var NavBarComponent = (function () {
-    function NavBarComponent() {
-        this.nameApp = "Weather";
+var CityHistoricAppComponent = (function () {
+    function CityHistoricAppComponent() {
+        this.showCitySelected = false;
+        this.showCitySaved = true;
+        this.cityResultSearch = JSON.parse(localStorage.getItem('cities'));
     }
-    return NavBarComponent;
+    CityHistoricAppComponent.prototype.showCityWhenUserClick = function (city) {
+        this.cityToShow = city;
+        this.showCitySelected = true;
+        this.showCitySaved = false;
+    };
+    CityHistoricAppComponent.prototype.showListCities = function () {
+        this.showCitySelected = false;
+        this.showCitySaved = true;
+    };
+    return CityHistoricAppComponent;
 }());
-NavBarComponent = __decorate([
+CityHistoricAppComponent = __decorate([
     core_1.Component({
-        selector: 'navbar-app',
-        templateUrl: './navbar.component.html'
+        selector: 'city-historics-search',
+        templateUrl: './city.historic.html',
     }),
     __metadata("design:paramtypes", [])
-], NavBarComponent);
-exports.NavBarComponent = NavBarComponent;
-//# sourceMappingURL=navbar.component.js.map
+], CityHistoricAppComponent);
+exports.CityHistoricAppComponent = CityHistoricAppComponent;
+//# sourceMappingURL=city.historic.js.map

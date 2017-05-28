@@ -61,6 +61,7 @@ var CityResultComponent = (function () {
         this.cityFound = new City(this.dataFound.name, "", this.dataFound.lng, this.dataFound.lat, this.ptosGeoOfCity);
         this.getTemperatureForThisCity();
         this.printGoogleMap();
+        this.citySelected = this.dataFound.name;
     };
     CityResultComponent.prototype.printGoogleMap = function () {
         var srcToMaps = "https://www.google.com/maps/embed/v1/search?q=" + this.citySelected + "&key=AIzaSyBnqUQM3sEzfph4qdGIMM6PSenBgPC3IPY";

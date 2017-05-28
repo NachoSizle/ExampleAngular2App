@@ -15,6 +15,22 @@ body {
   color: #dedfe0 !important;
 }
 
+.changeColorTwo {
+  color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+  background-color: #ddd !important;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #fff !important;
+}
+
+.listCitiesHistoric>li>a {
+  color: #fff !important;
+}
+
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
@@ -64,6 +80,12 @@ h1 {
   .vertical {
     width: 300% !important;
   }
+  .navbar-collapse {
+    background-color: #e8f4f9 !important;
+  }
+  .navbar-default .navbar-nav>li>a {
+    color: #000 !important;
+  }
 }
 
 @media screen and (min-width: 413px) and (max-width: 767px) and (orientation: landscape) {
@@ -88,6 +110,12 @@ h1 {
   .vertical {
     width: 440% !important;
   }
+  .navbar-collapse {
+    background-color: #e8f4f9 !important;
+  }
+  .navbar-default .navbar-nav>li>a {
+    color: #000 !important;
+  }
 }
 
 .padR5 {
@@ -104,6 +132,14 @@ h1 {
 
 .noPadL {
   padding-left: 0px !important;
+}
+
+.noMarTop {
+  margin-top: 0px !important;
+}
+
+.noMarBottom {
+  margin-bottom: 0px !important;
 }
 
 .width80 {

@@ -1,0 +1,19 @@
+<div class="col-xs-12 col-sm-10 col-md-10" *ngIf="showCitySaved">
+  <h2 class="changeColor noMarTop"> Historic Search City</h2>
+  <ul class="listCitiesHistoric">
+    <li *ngFor="let city of cityResultSearch; let i = index;">
+      <a (click)="showCityWhenUserClick(city)">{{city}}</a>
+    </li>
+  </ul>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-10 noPadL noPadR" *ngIf="showCitySelected">
+  <div class="col-xs-12 col-sm-12 col-md-10">
+    <h2 class="noMarTop noMarBottom">
+      <a class="changeColorTwo" (click)="showListCities()">
+        <i class="material-icons">arrow_back</i> Historic Search City
+      </a>
+    </h2>
+  </div>
+  <city-result [citySelected]="cityToShow"></city-result>
+</div>
